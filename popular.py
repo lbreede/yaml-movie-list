@@ -28,7 +28,6 @@ def yaml_dump_movies(lst):
 
 		# Add more custom keys
 		obj["year"] = int(year)
-		print(dict(m).genres)
 
 		with open(path, "w") as f:
 			yaml.dump(obj, f)

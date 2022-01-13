@@ -6,8 +6,6 @@ import yaml
 tmdb = TMDb()
 tmdb.api_key = API_KEY
 
-
-
 def yaml_dump_movies(lst):
 	
 	for m in lst:
@@ -31,16 +29,21 @@ def yaml_dump_movies(lst):
 		# obj["popularity"] = float(obj["popularity"]) # test not yet failed
 		obj["vote_average"] = float(obj["vote_average"])
 
+		# Add more custom keys
+		obj["year"] = int(year)
+
 		with open(path, "w") as f:
 			yaml.dump(obj, f)
 
 def main():
 	movie = Movie()
-	movies = movie.popular()
-	# s = movie.search("The Lighthouse 1")
-	# first_result = s[0]
-	# movies = movie.recommendations(first_result.id)
 
+	movies = movie.popular()
+	yaml_dump_movies(movies)
+
+	s = movie.search("The Lighthouse 1")
+	first_result = s[0]
+	movies = movie.recommendations(first_result.id)
 	yaml_dump_movies(movies)
 
 if __name__ == '__main__':

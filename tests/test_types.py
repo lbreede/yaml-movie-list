@@ -4,19 +4,20 @@ import yaml
 
 class TestTypes(unittest.TestCase):
 
-	def setUp(self):
+	@classmethod
+	def setUpClass(cls):
 		paths = []
 
 		for root, dirs, files in os.walk("..\\movies\\"):
 			for name in files:
 				paths.append(os.path.join(root, name))
 
-		self.movies = []
+		cls.movies = []
 
 		for p in paths:
 			with open(p) as f:
 				data = yaml.safe_load(f)
-			self.movies.append(data)
+			cls.movies.append(data)
 
 	def test_adult(self):
 		for m in self.movies:
@@ -77,6 +78,10 @@ class TestTypes(unittest.TestCase):
 	def test_vote_count(self):
 		for m in self.movies:
 			self.assertIsInstance(m["vote_count"], int)
+
+	def test_year(self):
+		for m in self.movies:
+			self.assertIsInstance(m["year"], int)
 
 if __name__ == '__main__':
 	unittest.main()

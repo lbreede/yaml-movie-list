@@ -4,25 +4,26 @@ import yaml
 
 class TestYaml(unittest.TestCase):
 
-	def setUp(self):
+	@classmethod
+	def setUpClass(cls):
 		paths = []
-		self.names = []
+		cls.names = []
 
 		for root, dirs, files in os.walk("..\\movies\\"):
 			for name in files:
 				paths.append(os.path.join(root, name))
-				self.names.append(name)
+				cls.names.append(name)
 
-		self.movies = []
+		cls.movies = []
 
 		for p in paths:
 			with open(p) as f:
 				data = yaml.safe_load(f)
-			self.movies.append(data)
+			cls.movies.append(data)
 
 	def test_dict_len(self):
 		for m in self.movies:
-			self.assertEqual(len(m), 15)
+			self.assertEqual(len(m), 16)
 
 	def test_filenames(self):
 		for n in self.names:

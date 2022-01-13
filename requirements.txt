@@ -1,2 +1,2 @@
 tmdbv3api
-yaml
+PyYAML

@@ -25,7 +25,8 @@ class TestTypes(unittest.TestCase):
 
 	def test_backdrop_path(self):
 		for m in self.movies:
-			self.assertIsInstance(m["backdrop_path"], str)
+			# print(m["title"], m["year"])
+			self.assertIsInstance(m["backdrop_path"], (str, type(None)))
 
 	def test_genre_ids(self):
 		for m in self.movies:

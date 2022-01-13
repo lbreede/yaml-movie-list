@@ -30,6 +30,7 @@ class TestYaml(unittest.TestCase):
 			self.assertNotIn(":", n)
 			self.assertIn(".yaml", n)
 			self.assertNotIn("---", n)
+			self.assertNotIn("'", n)
 
 if __name__ == '__main__':
 	unittest.main()

@@ -1,6 +1,6 @@
 [run]
 branch = True
-source = .
+source = yaml-movie-list
 
 [report]
 exclude_lines =

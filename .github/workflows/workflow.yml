@@ -38,3 +38,5 @@ jobs:
       # Codecov
       - name: Codecov
         uses: codecov/codecov-action@v2.1.0
+        with:
+          files: ./coverage.xml

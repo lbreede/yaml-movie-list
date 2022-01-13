@@ -7,13 +7,18 @@ genre_ids:
 - 35
 - 12
 id: 585083
+media_type: ''
 original_language: en
 original_title: 'Hotel Transylvania: Transformania'
-overview: ''
+overview: When Van Helsing's mysterious invention, the "Monsterfication Ray," goes
+  haywire, Drac and his monster pals are all transformed into humans, and Johnny becomes
+  a monster. In their new mismatched bodies, Drac and Johnny must team up and race
+  across the globe to find a cure before it's too late, and before they drive each
+  other crazy.
 popularity: 1058.789
 poster_path: /6zt5l4DYV1kLPL5Vqz1kLq3THXD.jpg
 release_date: '2022-01-14'
 title: 'Hotel Transylvania: Transformania'
 video: false
-vote_average: 6
+vote_average: 6.0
 vote_count: 2

@@ -1,0 +1,23 @@
+adult: false
+backdrop_path: /xKb6mtdfI5Qsggc44Hr9CCUDvaj.jpg
+genre_ids:
+- 28
+- 53
+- 878
+id: 280
+media_type: movie
+original_language: en
+original_title: 'Terminator 2: Judgment Day'
+overview: Nearly 10 years have passed since Sarah Connor was targeted for termination
+  by a cyborg from the future. Now her son, John, the future leader of the resistance,
+  is the target for a newer, more deadly terminator. Once again, the resistance has
+  managed to send a protector back to attempt to save John and his mother Sarah.
+popularity: 65.529
+poster_path: /weVXMD5QBGeQil4HEATZqAkXeEc.jpg
+release_date: 1991-07-03
+title: 'Terminator 2: Judgment Day'
+upcoming: false
+video: false
+vote_average: 8.061
+vote_count: 9993
+year: 1991

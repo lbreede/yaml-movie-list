@@ -4,10 +4,8 @@ import os.path
 import yaml
 import datetime
 
-def yaml_dump_movies(lst):
-	
+def yaml_dump_movies(lst):	
 	for m in lst:
-
 		year, month, day = list(map(int, m.release_date.split("-")))
 		title = m.title.lower().replace(" - ", "-").replace(" ", "-").replace(":", "").replace("'", "")
 		path = f"movies/{year}"
@@ -33,8 +31,6 @@ def yaml_dump_movies(lst):
 		obj["release_date"] = dt_release_date
 		obj["year"] = year
 		obj["upcoming"] = False
-		# print(m.genre())
-
 		
 		dt_today = datetime.date.today()
 		if dt_release_date > dt_today:
@@ -62,11 +58,11 @@ movie = Movie()
 
 def main():	
 	# save_popular_movies()
-	# save_movie_based_on_title_recommendations("The Northman")
-	save_movie("The Northman")
-	save_movie("The Lighthouse")
-	save_movie("The VVitch")
-	save_movie("Dune: Part Two")
+	# save_movie_based_on_title_recommendations("Star Wars")
+	# save_movie("The Northman")
+	# save_movie("The Lighthouse")
+	# save_movie("The VVitch")
+	# save_movie("Dune: Part Two")
 
 if __name__ == '__main__':
 	main()

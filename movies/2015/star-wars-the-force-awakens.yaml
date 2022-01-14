@@ -1,0 +1,22 @@
+adult: false
+backdrop_path: /k6EOrckWFuz7I4z4wiRwz8zsj4H.jpg
+genre_ids:
+- 28
+- 12
+- 878
+- 14
+id: 140607
+media_type: movie
+original_language: en
+original_title: 'Star Wars: The Force Awakens'
+overview: Thirty years after defeating the Galactic Empire, Han Solo and his allies
+  face a new threat from the evil Kylo Ren and his army of Stormtroopers.
+popularity: 80.222
+poster_path: /wqnLdwVXoBjKibFRR5U3y0aDUhs.jpg
+release_date: 2015-12-15
+title: 'Star Wars: The Force Awakens'
+upcoming: false
+video: false
+vote_average: 7.332
+vote_count: 16572
+year: 2015

@@ -2,12 +2,13 @@ from tmdbv3api import TMDb, Movie
 from config import *
 import os.path
 import yaml
+import datetime
 
 def yaml_dump_movies(lst):
 	
 	for m in lst:
 
-		year = m.release_date.split("-")[0]
+		year, month, day = list(map(int, m.release_date.split("-")))
 		title = m.title.lower().replace(" - ", "-").replace(" ", "-").replace(":", "").replace("'", "")
 		path = f"movies/{year}"
 
@@ -26,9 +27,18 @@ def yaml_dump_movies(lst):
 		# obj["popularity"] = float(obj["popularity"]) # test not yet failed
 		obj["vote_average"] = float(obj["vote_average"])
 
+		dt_release_date = datetime.date(year, month, day)
+
 		# Add more custom keys
-		obj["year"] = int(year)
+		obj["release_date"] = dt_release_date
+		obj["year"] = year
+		obj["upcoming"] = False
 		# print(m.genre())
+
+		
+		dt_today = datetime.date.today()
+		if dt_release_date > dt_today:
+			obj["upcoming"] = True
 
 		with open(path, "w") as f:
 			yaml.dump(obj, f)
@@ -51,9 +61,11 @@ tmdb.api_key = API_KEY
 movie = Movie()
 
 def main():	
-	save_popular_movies()
-	save_movie_based_on_title_recommendations("Modern Times")
+	# save_popular_movies()
+	# save_movie_based_on_title_recommendations("Modern Times")
+	save_movie("The Northman")
 	save_movie("The Lighthouse")
+	save_movie("The VVitch")
 
 if __name__ == '__main__':
 	main()

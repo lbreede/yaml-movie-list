@@ -61,11 +61,12 @@ tmdb.api_key = API_KEY
 movie = Movie()
 
 def main():	
-	save_popular_movies()
-	save_movie_based_on_title_recommendations("Modern Times")
+	# save_popular_movies()
+	# save_movie_based_on_title_recommendations("The Northman")
 	save_movie("The Northman")
 	save_movie("The Lighthouse")
 	save_movie("The VVitch")
+	save_movie("Dune: Part Two")
 
 if __name__ == '__main__':
 	main()

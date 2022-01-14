@@ -1,0 +1,21 @@
+adult: false
+backdrop_path: /r8pUcom5Mw8igtBpj3AHSAUvH0R.jpg
+genre_ids:
+- 18
+- 878
+id: 19
+media_type: movie
+original_language: de
+original_title: Metropolis
+overview: In a futuristic city sharply divided between the working class and the city
+  planners, the son of the city's mastermind falls in love with a working class prophet
+  who predicts the coming of a savior to mediate their differences.
+popularity: 18.326
+poster_path: /hUK9rewffKGqtXynH5SW3v9hzcu.jpg
+release_date: 1927-02-06
+title: Metropolis
+upcoming: false
+video: false
+vote_average: 8.187
+vote_count: 1954
+year: 1927

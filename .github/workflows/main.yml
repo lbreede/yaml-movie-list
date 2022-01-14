@@ -16,10 +16,10 @@ jobs:
 
       - name: Generate coverage report
         run: |
-          pip install PyYAML
-          pip install coverage
-          coverage run -m unittest discover -p "test_*.py"
-          coverage xml
+          python -m unittest discover -p "test_*.py"
+#          pip install coverage
+#          coverage run -m unittest discover -p "test_*.py"
+#          coverage xml
           
 #       - name: Upload coverage to Codecov
 #         uses: codecov/codecov-action@v2

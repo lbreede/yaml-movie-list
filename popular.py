@@ -1,5 +1,5 @@
 from tmdbv3api import TMDb, Movie
-from auth import *
+from config import *
 import os.path
 import yaml
 
@@ -28,32 +28,31 @@ def yaml_dump_movies(lst):
 
 		# Add more custom keys
 		obj["year"] = int(year)
+		# print(m.genre())
 
 		with open(path, "w") as f:
 			yaml.dump(obj, f)
 
 def save_popular_movies():
-	movies = movie.popular()
-	yaml_dump_movies(movies)
+	popular = movie.popular()
+	yaml_dump_movies(popular)
 
 def save_movie_based_on_title_recommendations(title):
-	s = movie.search(title + " 1")
-	first_result = s[0]
-	movies = movie.recommendations(first_result.id)
-	yaml_dump_movies(movies)
+	s = movie.search(title + " 1")[0]
+	recommendations = movie.recommendations(s.id)
+	yaml_dump_movies(recommendations)
 
 def save_movie(title):
-	s = movie.search(title + " 1")
-	first_result = s[0]
-	yaml_dump_movies([first_result])
+	s = movie.search(title + " 1")[0]
+	yaml_dump_movies([s])
 
 tmdb = TMDb()
 tmdb.api_key = API_KEY
 movie = Movie()
 
 def main():	
-	# save_popular_movies()
-	# save_movie_based_on_title_recommendations("Modern Times")
+	save_popular_movies()
+	save_movie_based_on_title_recommendations("Modern Times")
 	save_movie("The Lighthouse")
 
 if __name__ == '__main__':

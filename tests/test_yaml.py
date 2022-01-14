@@ -8,14 +8,12 @@ class TestYaml(unittest.TestCase):
 	def setUpClass(cls):
 		paths = []
 		cls.names = []
-
 		for root, dirs, files in os.walk("..\\movies\\"):
 			for name in files:
 				paths.append(os.path.join(root, name))
 				cls.names.append(name)
 
 		cls.movies = []
-
 		for p in paths:
 			with open(p) as f:
 				data = yaml.safe_load(f)

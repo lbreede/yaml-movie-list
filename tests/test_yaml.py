@@ -23,7 +23,7 @@ class TestYaml(unittest.TestCase):
 
 	def test_dict_len(self):
 		for m in self.movies:
-			self.assertEqual(len(m), 16)
+			self.assertEqual(len(m), 17)
 
 	def test_filenames(self):
 		for n in self.names:

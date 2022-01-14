@@ -1,6 +1,7 @@
 import unittest
 import os
 import yaml
+import datetime
 
 class TestTypes(unittest.TestCase):
 
@@ -25,8 +26,10 @@ class TestTypes(unittest.TestCase):
 
 	def test_backdrop_path(self):
 		for m in self.movies:
-			# print(m["title"], m["year"])
-			self.assertIsInstance(m["backdrop_path"], (str, type(None)))
+			self.assertTrue(
+				isinstance(m["backdrop_path"], str) or 
+				m["backdrop_path"] is None
+			)
 
 	def test_genre_ids(self):
 		for m in self.movies:
@@ -62,11 +65,15 @@ class TestTypes(unittest.TestCase):
 
 	def test_release_date(self):
 		for m in self.movies:
-			self.assertIsInstance(m["release_date"], str)
+			self.assertIsInstance(m["release_date"], datetime.date)
 
 	def test_title(self):
 		for m in self.movies:
 			self.assertIsInstance(m["title"], str)
+
+	def test_upcoming(self):
+		for m in self.movies:
+			self.assertIsInstance(m["upcoming"], bool)
 
 	def test_video(self):
 		for m in self.movies:

@@ -1,8 +1,8 @@
 adult: false
 backdrop_path: /qBLEWvJNVsehJkEJqIigPsWyBse.jpg
 genre_ids:
-- 10751
 - 16
+- 10751
 - 14
 - 35
 - 12
@@ -15,12 +15,12 @@ overview: When Van Helsing's mysterious invention, the "Monsterfication Ray," go
   a monster. In their new mismatched bodies, Drac and Johnny must team up and race
   across the globe to find a cure before it's too late, and before they drive each
   other crazy.
-popularity: 1058.789
-poster_path: /6zt5l4DYV1kLPL5Vqz1kLq3THXD.jpg
-release_date: 2022-01-14
+popularity: 3233.661
+poster_path: /teCy1egGQa0y8ULJvlrDHQKnxBL.jpg
+release_date: 2022-01-13
 title: 'Hotel Transylvania: Transformania'
-upcoming: true
+upcoming: false
 video: false
-vote_average: 6.0
-vote_count: 2
+vote_average: 7.5
+vote_count: 1700
 year: 2022

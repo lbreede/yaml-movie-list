@@ -1,8 +1,8 @@
 adult: false
 backdrop_path: /tutaKitJJIaqZPyMz7rxrhb4Yxm.jpg
 genre_ids:
-- 16
 - 35
+- 16
 - 10751
 - 10402
 id: 438695
@@ -15,12 +15,12 @@ overview: Buster and his new cast now have their sights set on debuting a new sh
   ruthless wolf mogul Jimmy Crystal, where the gang pitches the ridiculous idea of
   casting the lion rock legend Clay Calloway in their show. Buster must embark on
   a quest to find the now-isolated Clay and persuade him to return to the stage.
-popularity: 9211.33
+popularity: 2407.725
 poster_path: /aWeKITRFbbwY8txG5uCj4rMCfSP.jpg
 release_date: 2021-12-01
 title: Sing 2
 upcoming: false
 video: false
-vote_average: 7.5
-vote_count: 264
+vote_average: 8.2
+vote_count: 1824
 year: 2021
